@@ -2,6 +2,6 @@ const express = require('./index.js');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello Cruel World!'));
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));

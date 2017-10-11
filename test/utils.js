@@ -2,6 +2,16 @@
 var assert = require('assert');
 var utils = require('../lib/utils');
 
+const getX = () => new Promise((resolve) => { setTimeout(() => { resolve(99); }, 200); });
+
+describe('async test', () => {
+  it('async/await', async function test() {
+    // this.timeout(999999999);
+    const x = await getX();
+    assert.strictEqual(x, 99);
+  });
+});
+
 describe('utils.etag(body, encoding)', function(){
   it('should support strings', function(){
     utils.etag('express!')
